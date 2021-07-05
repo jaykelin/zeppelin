@@ -76,6 +76,17 @@
             </configuration>
           </execution>
 
+<!--          <execution>-->
+<!--            <id>npm config</id>-->
+<!--            <goals>-->
+<!--              <goal>npm</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <skip>${web.e2e.enabled}</skip>-->
+<!--              <arguments>config set registry http://registry.npm.taobao.org</arguments>-->
+<!--            </configuration>-->
+<!--          </execution>-->
+
           <execution>
             <id>npm install</id>
             <goals>
@@ -83,7 +94,7 @@
             </goals>
             <configuration>
               <skip>${web.e2e.enabled}</skip>
-              <arguments>install --no-lockfile</arguments>
+              <arguments>--registry https://registry.npm.taobao.org install --no-lockfile</arguments>
             </configuration>
           </execution>
 
